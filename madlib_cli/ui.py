@@ -27,4 +27,5 @@ madlib = read_template("assets/dark_and_stormy_night.txt")
 deconstructed = parse_template(madlib)
 
 parts = get_responses()
-print(merge(deconstructed.final_text, parts))
+print(user_responses)
+print(merge(deconstructed.final_text, user_responses))
