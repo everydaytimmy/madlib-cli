@@ -24,8 +24,7 @@ def get_responses():
 
 
 madlib = read_template("assets/dark_and_stormy_night.txt")
-deconstructed = parse_template(madlib)
-
+parsed_text, words = parse_template(madlib)
 parts = get_responses()
 print(user_responses)
-print(merge(deconstructed.final_text, user_responses))
+print(merge(parsed_text, user_responses))
