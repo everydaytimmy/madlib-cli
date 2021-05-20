@@ -22,7 +22,6 @@ def parse_template(template):
     else:
       final_text += char
 
-  # This returns a Tuple. It knows this because of the comma
   return final_text, tuple(collection)
 
 def merge(template, parts):
@@ -49,7 +48,6 @@ if __name__ == "__main__":
   parsed_text, words = parse_template(madlib)
 
   def get_responses(speech_parts):
-    #need template text to put words into
     for part in speech_parts:
         prompt = f"Provide a/an {part}  "
         response = input(prompt)
@@ -57,3 +55,5 @@ if __name__ == "__main__":
   
   get_responses(words)
   print(merge(parsed_text, user_responses))
+
+  #TO DO - Create more templates and RNG to select one for read_template
